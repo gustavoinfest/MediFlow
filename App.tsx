@@ -36,7 +36,6 @@ function App() {
     { id: 'prontuario', label: 'Prontuário Eletrônico', icon: FileText },
     { id: 'marketing', label: 'Marketing Médico', icon: Mail },
     { id: 'financeiro', label: 'Gestão Financeira', icon: DollarSign },
-    { id: 'teleconsulta', label: 'Teleconsulta', icon: Video },
     { id: 'agendamento', label: 'Agendamento Online', icon: Globe },
   ];
 

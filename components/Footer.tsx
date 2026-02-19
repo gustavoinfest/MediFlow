@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Activity, Instagram, Linkedin, Facebook } from 'lucide-react';
 
@@ -26,7 +27,6 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm">
               <li><a href="#" className="hover:text-teal-400 transition-colors">Funcionalidades</a></li>
               <li><a href="#" className="hover:text-teal-400 transition-colors">Planos e Preços</a></li>
-              <li><a href="#" className="hover:text-teal-400 transition-colors">Telemedicina</a></li>
               <li><a href="#" className="hover:text-teal-400 transition-colors">Segurança</a></li>
               <li><a href="#" className="hover:text-teal-400 transition-colors">Integrações</a></li>
             </ul>

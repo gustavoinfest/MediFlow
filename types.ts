@@ -1,5 +1,5 @@
 
-export type ViewType = 'dashboard' | 'agenda' | 'prontuario' | 'marketing' | 'financeiro' | 'teleconsulta' | 'agendamento' | 'configuracoes';
+export type ViewType = 'dashboard' | 'agenda' | 'prontuario' | 'marketing' | 'financeiro' | 'agendamento' | 'configuracoes';
 
 export interface Patient {
   id: string;

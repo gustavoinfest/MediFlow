@@ -32,7 +32,6 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate, clinicName }) 
     { id: 'prontuario', title: 'Prontuário Eletrônico', icon: FileText, color: 'bg-emerald-600' },
     { id: 'marketing', title: 'Marketing Médico', icon: Mail, color: 'bg-emerald-500' },
     { id: 'financeiro', title: 'Gestão Financeira', icon: DollarSign, color: 'bg-emerald-600' },
-    { id: 'teleconsulta', title: 'Teleconsulta', icon: Video, color: 'bg-emerald-500' },
     { id: 'agendamento', title: 'Agendamento Online', icon: Globe, color: 'bg-emerald-600' },
   ];
 

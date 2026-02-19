@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { CalendarDays, FileText, Wallet, Smartphone, Check, Users, ShieldCheck, Mail } from 'lucide-react';
 
@@ -133,21 +134,6 @@ export const Features: React.FC = () => {
         ]}
         imageSide="right"
         gradientColors="from-orange-500 to-amber-500"
-      />
-
-      <FeatureSection
-        id="telemedicina"
-        title="Telemedicina Integrada"
-        description="Atenda pacientes de qualquer lugar com segurança. Nossa plataforma de vídeo é estável, segura e não exige instalação de nenhum software adicional."
-        icon={Smartphone}
-        items={[
-          "Videochamada integrada ao prontuário",
-          "Envio de link da sala por WhatsApp/SMS",
-          "Termo de consentimento digital",
-          "Gravação de consulta (opcional)"
-        ]}
-        imageSide="left"
-        gradientColors="from-purple-500 to-indigo-500"
       />
 
       <FeatureSection

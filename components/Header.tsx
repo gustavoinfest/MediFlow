@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Activity } from 'lucide-react';
 
@@ -34,7 +35,6 @@ export const Header: React.FC = () => {
           <a href="#agenda" className="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">Agenda</a>
           <a href="#prontuario" className="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">Prontuário</a>
           <a href="#financeiro" className="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">Financeiro</a>
-          <a href="#telemedicina" className="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">Telemedicina</a>
           <button className="bg-teal-600 hover:bg-teal-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg hover:shadow-teal-200">
             Experimente Grátis
           </button>
@@ -55,7 +55,6 @@ export const Header: React.FC = () => {
           <a href="#agenda" className="text-base font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Agenda</a>
           <a href="#prontuario" className="text-base font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Prontuário</a>
           <a href="#financeiro" className="text-base font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Financeiro</a>
-          <a href="#telemedicina" className="text-base font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Telemedicina</a>
           <button className="w-3/4 bg-teal-600 text-white px-5 py-3 rounded-lg font-semibold">
             Começar Agora
           </button>
