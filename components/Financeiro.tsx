@@ -41,7 +41,7 @@ export const Financeiro: React.FC = () => {
             <Download size={18} />
             Relatórios
           </button>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold shadow-lg shadow-blue-200 transition-all">
+          <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-semibold shadow-lg shadow-emerald-200 transition-all">
             + Nova Transação
           </button>
         </div>
@@ -58,7 +58,7 @@ export const Financeiro: React.FC = () => {
           <p className="text-3xl font-bold text-slate-900">R$ {Math.abs(stats.expense).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</p>
           <TrendingDown size={40} className="text-red-50 absolute bottom-4 right-6" />
         </div>
-        <div className="bg-blue-600 p-6 rounded-2xl text-white shadow-xl shadow-blue-200 relative overflow-hidden">
+        <div className="bg-emerald-600 p-6 rounded-2xl text-white shadow-xl shadow-emerald-200 relative overflow-hidden">
           <p className="text-sm font-medium opacity-80 mb-1">Saldo Atual</p>
           <p className="text-3xl font-bold">R$ {stats.balance.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</p>
           <DollarSign size={40} className="opacity-20 absolute bottom-4 right-6" />
@@ -70,7 +70,7 @@ export const Financeiro: React.FC = () => {
           <div className="flex bg-slate-100 p-1 rounded-lg w-full md:w-auto">
             <button 
               onClick={() => setFilterType('all')}
-              className={`px-4 py-1.5 text-xs font-bold rounded-md transition-all ${filterType === 'all' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+              className={`px-4 py-1.5 text-xs font-bold rounded-md transition-all ${filterType === 'all' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
             >
               Todas
             </button>
@@ -95,7 +95,7 @@ export const Financeiro: React.FC = () => {
               placeholder="Buscar descrição ou categoria..." 
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:ring-2 focus:ring-blue-500/20 outline-none"
+              className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:ring-2 focus:ring-emerald-500/20 outline-none"
             />
           </div>
         </div>

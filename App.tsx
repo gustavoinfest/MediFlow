@@ -61,7 +61,7 @@ function App() {
           <p>Esta funcionalidade será integrada em breve.</p>
           <button 
             onClick={() => setCurrentView('dashboard')}
-            className="mt-4 text-blue-600 font-semibold hover:underline"
+            className="mt-4 text-emerald-600 font-semibold hover:underline"
           >
             Voltar ao início
           </button>
@@ -75,8 +75,8 @@ function App() {
       {/* Sidebar */}
       <aside className="w-64 bg-slate-900 text-white flex flex-col shrink-0">
         <div className="p-6 flex items-center gap-3 border-b border-slate-800">
-          <div className="bg-blue-600 p-1.5 rounded-lg">
-            <Activity size={20} className="text-white" />
+          <div className="bg-emerald-600 p-1.5 rounded-lg text-white">
+            <Activity size={20} />
           </div>
           <span className="text-xl font-bold tracking-tight truncate">{clinicName}</span>
         </div>
@@ -89,7 +89,7 @@ function App() {
                   onClick={() => setCurrentView(item.id as ViewType)}
                   className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                     currentView === item.id 
-                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/20' 
+                      ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-900/20' 
                       : 'text-slate-400 hover:text-white hover:bg-slate-800'
                   }`}
                 >
@@ -129,12 +129,12 @@ function App() {
             <input 
               type="text" 
               placeholder="Buscar paciente ou consulta..." 
-              className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+              className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 transition-all"
             />
           </div>
           
           <div className="flex items-center gap-6">
-            <button className="relative text-slate-600 hover:text-blue-600 transition-colors">
+            <button className="relative text-slate-600 hover:text-emerald-600 transition-colors">
               <Bell size={20} />
               <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-[10px] flex items-center justify-center rounded-full border-2 border-white">3</span>
             </button>
@@ -144,7 +144,7 @@ function App() {
                 <p className="text-sm font-semibold text-slate-900 leading-none">Dr. Ricardo Mendes</p>
                 <p className="text-xs text-slate-500 mt-1">CRM 12345-SP</p>
               </div>
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold border border-blue-200">
+              <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold border border-emerald-200">
                 RM
               </div>
             </div>

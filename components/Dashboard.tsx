@@ -28,12 +28,12 @@ const mockPatients: Patient[] = [
 
 export const Dashboard: React.FC<DashboardProps> = ({ onNavigate, clinicName }) => {
   const cards = [
-    { id: 'agenda', title: 'Agenda Médica', icon: Calendar, color: 'bg-blue-500' },
-    { id: 'prontuario', title: 'Prontuário Eletrônico', icon: FileText, color: 'bg-blue-600' },
-    { id: 'marketing', title: 'Marketing Médico', icon: Mail, color: 'bg-blue-500' },
-    { id: 'financeiro', title: 'Gestão Financeira', icon: DollarSign, color: 'bg-blue-600' },
-    { id: 'teleconsulta', title: 'Teleconsulta', icon: Video, color: 'bg-blue-500' },
-    { id: 'agendamento', title: 'Agendamento Online', icon: Globe, color: 'bg-blue-600' },
+    { id: 'agenda', title: 'Agenda Médica', icon: Calendar, color: 'bg-emerald-500' },
+    { id: 'prontuario', title: 'Prontuário Eletrônico', icon: FileText, color: 'bg-emerald-600' },
+    { id: 'marketing', title: 'Marketing Médico', icon: Mail, color: 'bg-emerald-500' },
+    { id: 'financeiro', title: 'Gestão Financeira', icon: DollarSign, color: 'bg-emerald-600' },
+    { id: 'teleconsulta', title: 'Teleconsulta', icon: Video, color: 'bg-emerald-500' },
+    { id: 'agendamento', title: 'Agendamento Online', icon: Globe, color: 'bg-emerald-600' },
   ];
 
   const today = new Date().toISOString().slice(5, 10); // MM-DD
@@ -52,7 +52,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate, clinicName }) 
         <div className="lg:col-span-2 space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
-              <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center">
                 <Users size={24} />
               </div>
               <div>
@@ -61,7 +61,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate, clinicName }) 
               </div>
             </div>
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-4">
-              <div className="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center">
                 <TrendingUp size={24} />
               </div>
               <div>
@@ -117,6 +117,23 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate, clinicName }) 
                 <p className="text-sm text-slate-400 text-center py-4 italic">Nenhum aniversariante hoje.</p>
               )}
             </div>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h3 className="font-bold text-slate-900 text-sm mb-4 flex items-center gap-2">
+              <Clock size={18} className="text-emerald-600" />
+              Lembretes Rápidos
+            </h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3 text-xs text-slate-600">
+                <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
+                Revisar faturamento Unimed (vence amanhã)
+              </li>
+              <li className="flex items-center gap-3 text-xs text-slate-600">
+                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+                Confirmar cirurgia das 14:00
+              </li>
+            </ul>
           </div>
         </div>
       </div>

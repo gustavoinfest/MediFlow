@@ -41,7 +41,7 @@ export const Prontuario: React.FC = () => {
           <h2 className="text-2xl font-bold text-slate-900">Prontuário Eletrônico</h2>
           <p className="text-slate-500">Pesquise e filtre sua base de pacientes de forma inteligente.</p>
         </div>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-lg shadow-blue-200 transition-all">
+        <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-lg shadow-emerald-200 transition-all">
           <UserPlus size={20} />
           Novo Paciente
         </button>
@@ -58,13 +58,13 @@ export const Prontuario: React.FC = () => {
                 placeholder="Nome ou CPF do paciente..." 
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
+                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 transition-all"
               />
             </div>
             <button 
               onClick={() => setShowFilters(!showFilters)}
               className={`flex items-center gap-2 px-4 py-2 border rounded-lg text-sm font-medium transition-colors ${
-                showFilters ? 'bg-blue-50 border-blue-200 text-blue-600' : 'border-slate-200 text-slate-600 hover:bg-slate-50'
+                showFilters ? 'bg-emerald-50 border-emerald-200 text-emerald-600' : 'border-slate-200 text-slate-600 hover:bg-slate-50'
               }`}
             >
               <Filter size={18} />
@@ -90,7 +90,7 @@ export const Prontuario: React.FC = () => {
                   <select 
                     value={birthMonthFilter}
                     onChange={(e) => setBirthMonthFilter(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:ring-2 focus:ring-blue-500/20 outline-none"
+                    className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:ring-2 focus:ring-emerald-500/20 outline-none"
                   >
                     <option value="">Todos os meses</option>
                     {months.map((m, i) => (
@@ -103,7 +103,7 @@ export const Prontuario: React.FC = () => {
                 <label className="block text-[10px] font-bold text-slate-500 uppercase mb-2">Última Visita</label>
                 <div className="relative">
                   <CalendarIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={16} />
-                  <select className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:ring-2 focus:ring-blue-500/20 outline-none">
+                  <select className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:ring-2 focus:ring-emerald-500/20 outline-none">
                     <option value="">Qualquer período</option>
                     <option value="7">Últimos 7 dias</option>
                     <option value="30">Últimos 30 dias</option>
@@ -139,12 +139,12 @@ export const Prontuario: React.FC = () => {
                     <td className="px-6 py-5">
                       <div className="flex items-center gap-3">
                         <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-colors ${
-                          isBirthdayMonth ? 'bg-orange-100 text-orange-600 ring-2 ring-orange-200' : 'bg-slate-100 text-slate-500 group-hover:bg-blue-100 group-hover:text-blue-600'
+                          isBirthdayMonth ? 'bg-orange-100 text-orange-600 ring-2 ring-orange-200' : 'bg-slate-100 text-slate-500 group-hover:bg-emerald-100 group-hover:text-emerald-600'
                         }`}>
                           {patient.name.charAt(0)}
                         </div>
                         <div>
-                          <p className="font-bold text-slate-900 group-hover:text-blue-600 flex items-center gap-2">
+                          <p className="font-bold text-slate-900 group-hover:text-emerald-600 flex items-center gap-2">
                             {patient.name}
                             {isBirthdayMonth && <Cake size={14} className="text-orange-500" title="Aniversariante do Mês" />}
                           </p>
@@ -158,7 +158,7 @@ export const Prontuario: React.FC = () => {
                     <td className="px-6 py-5 text-sm text-slate-500">{patient.phone}</td>
                     <td className="px-6 py-5 text-sm text-slate-500">{patient.lastVisit}</td>
                     <td className="px-6 py-5 text-right">
-                      <button className="text-blue-600 font-bold text-sm inline-flex items-center gap-1 hover:underline">
+                      <button className="text-emerald-600 font-bold text-sm inline-flex items-center gap-1 hover:underline">
                         Abrir
                         <ChevronRight size={16} />
                       </button>

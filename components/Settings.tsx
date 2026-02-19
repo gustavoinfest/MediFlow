@@ -31,7 +31,7 @@ export const Settings: React.FC<SettingsProps> = ({ clinicName, setClinicName, m
         </div>
         <button 
           onClick={handleSave}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-lg shadow-blue-200 transition-all active:scale-95"
+          className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-lg shadow-emerald-200 transition-all active:scale-95"
         >
           <Save size={20} />
           Salvar Alterações
@@ -49,7 +49,7 @@ export const Settings: React.FC<SettingsProps> = ({ clinicName, setClinicName, m
         {/* Clinic Name Card */}
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
           <div className="p-6 border-b border-slate-100 bg-slate-50 flex items-center gap-3">
-            <Building2 className="text-blue-600" size={20} />
+            <Building2 className="text-emerald-600" size={20} />
             <h3 className="font-bold text-slate-900">Identidade da Clínica</h3>
           </div>
           <div className="p-8">
@@ -60,10 +60,10 @@ export const Settings: React.FC<SettingsProps> = ({ clinicName, setClinicName, m
                 value={localName}
                 onChange={(e) => setLocalName(e.target.value)}
                 placeholder="Ex: Clínica Bem Estar"
-                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all font-medium text-slate-800"
+                className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none transition-all font-medium text-slate-800"
               />
               <p className="mt-3 text-xs text-slate-400 flex items-center gap-1">
-                <Info size={14} />
+                <span className="text-emerald-500"><Info size={14} /></span>
                 Este nome será exibido na barra lateral e em documentos.
               </p>
             </div>
@@ -73,7 +73,7 @@ export const Settings: React.FC<SettingsProps> = ({ clinicName, setClinicName, m
         {/* Automatic Messages Card */}
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
           <div className="p-6 border-b border-slate-100 bg-slate-50 flex items-center gap-3">
-            <MessageSquare className="text-blue-600" size={20} />
+            <MessageSquare className="text-emerald-600" size={20} />
             <h3 className="font-bold text-slate-900">Mensagens Automáticas (Templates)</h3>
           </div>
           <div className="p-8 space-y-8">
@@ -85,7 +85,7 @@ export const Settings: React.FC<SettingsProps> = ({ clinicName, setClinicName, m
                     value={localMessages.birthday}
                     onChange={(e) => setLocalMessages({...localMessages, birthday: e.target.value})}
                     rows={4}
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all text-sm resize-none"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none transition-all text-sm resize-none"
                     placeholder="Escreva a mensagem..."
                   />
                 </div>
@@ -95,7 +95,7 @@ export const Settings: React.FC<SettingsProps> = ({ clinicName, setClinicName, m
                     value={localMessages.confirmation}
                     onChange={(e) => setLocalMessages({...localMessages, confirmation: e.target.value})}
                     rows={4}
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all text-sm resize-none"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none transition-all text-sm resize-none"
                     placeholder="Escreva a mensagem..."
                   />
                 </div>
@@ -107,16 +107,16 @@ export const Settings: React.FC<SettingsProps> = ({ clinicName, setClinicName, m
                     value={localMessages.reminder}
                     onChange={(e) => setLocalMessages({...localMessages, reminder: e.target.value})}
                     rows={4}
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition-all text-sm resize-none"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none transition-all text-sm resize-none"
                     placeholder="Escreva a mensagem..."
                   />
                 </div>
-                <div className="bg-blue-50 p-6 rounded-2xl">
-                  <h4 className="text-sm font-bold text-blue-900 mb-3 flex items-center gap-2">
+                <div className="bg-emerald-50 p-6 rounded-2xl">
+                  <h4 className="text-sm font-bold text-emerald-900 mb-3 flex items-center gap-2">
                     <Info size={16} />
                     Dica de Variáveis
                   </h4>
-                  <p className="text-xs text-blue-700 leading-relaxed">
+                  <p className="text-xs text-emerald-700 leading-relaxed">
                     Você pode usar etiquetas entre colchetes que o sistema substituirá automaticamente:<br/><br/>
                     <code className="bg-white/50 px-1 rounded font-bold">[Paciente]</code> - Nome do Paciente<br/>
                     <code className="bg-white/50 px-1 rounded font-bold">[Clinica]</code> - Nome da sua Clínica<br/>
