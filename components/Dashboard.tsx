@@ -5,13 +5,13 @@ import {
   FileText, 
   Mail, 
   DollarSign, 
-  Video, 
   Globe,
   TrendingUp,
   Users,
   Clock,
   Cake,
-  MessageCircle
+  MessageCircle,
+  Stethoscope
 } from 'lucide-react';
 import { ViewType, Patient } from '../types';
 
@@ -30,8 +30,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate, clinicName }) 
   const cards = [
     { id: 'agenda', title: 'Agenda Médica', icon: Calendar, color: 'bg-emerald-500' },
     { id: 'prontuario', title: 'Prontuário Eletrônico', icon: FileText, color: 'bg-emerald-600' },
-    { id: 'marketing', title: 'Marketing Médico', icon: Mail, color: 'bg-emerald-500' },
-    { id: 'financeiro', title: 'Gestão Financeira', icon: DollarSign, color: 'bg-emerald-600' },
+    { id: 'profissionais', title: 'Corpo Clínico', icon: Users, color: 'bg-emerald-500' },
+    { id: 'marketing', title: 'Marketing Médico', icon: Mail, color: 'bg-emerald-600' },
+    { id: 'financeiro', title: 'Gestão Financeira', icon: DollarSign, color: 'bg-emerald-500' },
     { id: 'agendamento', title: 'Agendamento Online', icon: Globe, color: 'bg-emerald-600' },
   ];
 

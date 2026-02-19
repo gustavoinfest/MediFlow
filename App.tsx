@@ -6,24 +6,29 @@ import {
   FileText, 
   Mail, 
   DollarSign, 
-  Video, 
   Globe,
   LogOut,
   Bell,
   Search,
   Settings as SettingsIcon,
-  Activity
+  Activity,
+  Users
 } from 'lucide-react';
-import { ViewType, AutoMessages } from './types';
+import { ViewType, AutoMessages, Professional } from './types';
 import { Dashboard } from './components/Dashboard';
 import { Agenda } from './components/Agenda';
 import { Prontuario } from './components/Prontuario';
 import { Financeiro } from './components/Financeiro';
 import { Settings } from './components/Settings';
+import { Profissionais } from './components/Profissionais';
 
 function App() {
   const [currentView, setCurrentView] = useState<ViewType>('dashboard');
   const [clinicName, setClinicName] = useState('MediFlow');
+  const [professionals, setProfessionals] = useState<Professional[]>([
+    { id: '1', name: 'Dr. Ricardo Mendes', crm: '12345-SP', specialty: 'Cardiologia', email: 'ricardo@mediflow.com', phone: '11988887777', status: 'active' },
+    { id: '2', name: 'Dra. Camila Rodrigues', crm: '54321-SP', specialty: 'Dermatologia', email: 'camila@mediflow.com', phone: '11977776666', status: 'active' },
+  ]);
   const [messages, setMessages] = useState<AutoMessages>({
     birthday: 'Parabéns pelo seu dia! 🎉 A [Clinica] te deseja muita saúde e felicidades!',
     confirmation: 'Olá [Paciente], sua consulta na [Clinica] está confirmada para o dia [Data] às [Hora].',
@@ -34,6 +39,7 @@ function App() {
     { id: 'dashboard', label: 'Início', icon: LayoutDashboard },
     { id: 'agenda', label: 'Agenda Médica', icon: Calendar },
     { id: 'prontuario', label: 'Prontuário Eletrônico', icon: FileText },
+    { id: 'profissionais', label: 'Corpo Clínico', icon: Users },
     { id: 'marketing', label: 'Marketing Médico', icon: Mail },
     { id: 'financeiro', label: 'Gestão Financeira', icon: DollarSign },
     { id: 'agendamento', label: 'Agendamento Online', icon: Globe },
@@ -45,6 +51,12 @@ function App() {
       case 'agenda': return <Agenda />;
       case 'prontuario': return <Prontuario />;
       case 'financeiro': return <Financeiro />;
+      case 'profissionais': return (
+        <Profissionais 
+          professionals={professionals} 
+          setProfessionals={setProfessionals} 
+        />
+      );
       case 'configuracoes': return (
         <Settings 
           clinicName={clinicName} 
